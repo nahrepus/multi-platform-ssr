@@ -64,13 +64,13 @@ export function versionCheck (oldVersion, newVersion) {
 // 检查更新
 export function checkUpdate (force = false) {
   if (isLinux && !/\.AppImage&/.test(exePath)) {
-    request('https://raw.githubusercontent.com/erguotou520/electron-ssr/master/package.json').then(data => {
+    request('https://raw.githubusercontent.com/nahrepus/multi-platform-ssr/master/package.json').then(data => {
       const remotePkg = JSON.parse(data)
       const currentVersion = app.getVersion()
       const isOutdated = versionCheck(currentVersion, remotePkg.version)
       if (isOutdated) {
         showNotification(`最新版本为 v${remotePkg.version}，点击前往下载。`, '通知', () => {
-          shell.openExternal('https://github.com/erguotou520/electron-ssr/releases')
+          shell.openExternal('https://github.com/nahrepus/multi-platform-ssr/releases')
         })
       } else if (force) {
         showNotification('当前已是最新版，无需更新')
