@@ -39,7 +39,7 @@
     "erguotou-iview": "^2.9.1",
     "fs-extra": "^5.0.0",
     "http-shutdown": "^1.2.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "mousetrap": "^1.6.1",
     "qr-image": "^3.2.0",
     "rxjs": "^5.5.5",
